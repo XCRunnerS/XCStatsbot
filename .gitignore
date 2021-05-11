@@ -19,3 +19,9 @@ cmd.bat
 __pycache__/bot.cpython-39.pyc
 __pycache__/emojifunctionality.cpython-39.pyc
 __pycache__/minecraftfunctionality.cpython-39.pyc
+*.log
+.idea
+.idea/*
+__pycache__/*
+__pycache__
+cogs/__pycache__/*
