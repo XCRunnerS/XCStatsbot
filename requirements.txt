@@ -2,3 +2,5 @@ git+https://github.com/Rapptz/discord.py
 requests
 aiohttp
 asyncpg
+asyncio
+jsons
