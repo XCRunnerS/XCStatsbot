@@ -42,7 +42,7 @@ class Misc(commands.Cog):
                         value="` . ` ` h! `", inline=False)
         # https://discord.com/api/oauth2/authorize?client_id=804194845513613313&permissions=8&scope=bot
         embed.add_field(name="OAuth Invite:",
-                        value="http://bit.ly/XStatsOauth", inline=False)
+                        value="http://bit.ly/XStatsOauth2", inline=False)
         # longurl is https://discord.com/oauth2/authorize?client_id=804194845513613313&permissions=8&scope=bot
         embed.add_field(name="support server:",
                         value="https://discord.gg/R855EPMvNe", inline=False)
