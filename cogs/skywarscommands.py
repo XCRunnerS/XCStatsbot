@@ -26,7 +26,6 @@ class Skywarscommands(commands.Cog):
         #await reactionnav(ign, 0, 0, ctx, ())
         # emoji logic will go here, need message returned from ^
 
-
     @skywars.error
     async def skywar_serror(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
