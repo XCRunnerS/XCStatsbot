@@ -9,6 +9,7 @@ import json
 
 API_KEY = os.environ.get('HYPIXEL_API')
 DISCORD = os.environ.get('DISCORD_KEY')
+# testing git changes
 
 bot = commands.Bot(command_prefix=['.', 'h!'])
 
