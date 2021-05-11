@@ -172,8 +172,8 @@ async def hypixelstats(igns, gameid, current_pages, ctxx):
                 embed.set_image(
                     url=f"https://crafatar.com/renders/body/{uuid}.png")  # full body render instead of just head
             embed.set_footer(text=f"page {current_page+1} ")
-            msg = await ctx.send(embed=embed)  # sends embed
+            msg = (await ctx.send(embed=embed))  # sends embed
+            return msg
             # return the message I thinK????
     finally:
         print('function executed')
-        return msg
