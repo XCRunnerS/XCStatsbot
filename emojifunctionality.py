@@ -1,7 +1,6 @@
 """import os
 import discord
 from discord.ext import commands
-import hypixel
 import asyncio
 from urllib.request import urlopen
 import json
