@@ -24,11 +24,11 @@ for extension in os.listdir('./cogs'):
 
 @bot.event
 async def on_ready():
-    print('Bot Ready')
+    print('bot loading')
     await bot.wait_until_ready()
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='XStats || h!'))
-    channel = bot.get_channel(804132338438766613)
-    await channel.send('👀')
+    print('Bot Ready')
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='XStats || h!help'))
+
 
 # 376900391440220174
 

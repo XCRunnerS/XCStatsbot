@@ -79,37 +79,21 @@ class Skywarscommands(commands.Cog):
 
         # logic for switching tabs
             else:
-                print("entered else")
                 previous = current
-                print(current)
-                print(previous)
                 if reaction.emoji == u"\u2B05":
                     if current > 0:
                         current -= 1
-                        print('left emoji')
-                        print(current)
-                        print(previous)
 
                 if reaction.emoji == u"\u27A1":
                     if current < len(commands.skywars_pages)-1:
                         current += 1
-                        print('right emoji')
-                        print(current)
-                        print(previous)
 
                 for button in buttons:
                     await msg.remove_reaction(button, ctx.author)
-                    print('reaction removed')
-                    print(current)
-                    print(previous)
                 print('all reactions removed')
 
                 if current != previous:
-                    print('entered into loop to reset')
-                    print(current)
-                    print(previous)
                     await msg.edit(embed=commands.skywars_pages[current])
-                    print(current)
         # emoji navigation
 
     @skywars.error
@@ -117,12 +101,12 @@ class Skywarscommands(commands.Cog):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('missing arguments! please follow this context:\n`!command ign`')
 
-    @commands.command(name="rating", aliases=["rsw", "rs", "ranked", "badgame", 'r'])
-    async def rating(self, ctx, ign):
+    @commands.command(name="ranked", aliases=["rsw", "rs", "rankedsw", "badgame", 'r'])
+    async def ranked(self, ctx, ign):
         await hypixelstats(ign, 0, 4, ctx)
 
-    @rating.error
-    async def rating_error(self, ctx, error):
+    @ranked.error
+    async def ranked_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('missing arguments! please follow this context:\n`!command ign`')
 

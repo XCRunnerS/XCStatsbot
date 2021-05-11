@@ -42,7 +42,7 @@ hypixeldict = {
     'Bedwars':
         {'overall':
              ['wins_bedwars', 'losses_bedwars', 'W/L',
-              'final_kills_bedwars', 'final_deaths_bedwars', 'K/D'],
+              'final_kills_bedwars', 'final_deaths_bedwars', 'FK/DR'],
          },  # end of bw
     'Duels':
         {
@@ -117,9 +117,6 @@ async def hypixelstats(igns, gameid, current_pages, ctxx):
                 embed = discord.Embed(title=(f'{jsondump["player"]["displayname"]}'),
                                   color=embedcolor)
                 pass
-            else:
-                embed = discord.Embed(title=(f'{jsondump["player"]["displayname"]}'),
-                                  color=embedcolor)
             embed.set_author(name="XStats Bot", url="https://github.com/XCRunnerS",
                              icon_url=f"{embedimg}.png")  # this is the same method as the mojang api but just the url
             embed.set_thumbnail(url=f"{embedimg}.png")
