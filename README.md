@@ -16,6 +16,14 @@ Current features:
 
 .bedwars (bedwars, bws, bw)
 
+.duels (duel, 1v1, ds)
+
+.info (information, i, about, credits, more, inform)
+
+.donate (dono, donation, donations, donates, support, fund, d)
+
+.helpplus (h)
+
 ### Donation links for XCRunnerS#7188
 [![ko-fi](https://www.vectorlogo.zone/logos/ko-fi/ko-fi-ar21.svg)](https://ko-fi.com/xcrunners)
 <!--Again big thanks to ice for the idea, please donate to him, I didnt steal any code but reading
