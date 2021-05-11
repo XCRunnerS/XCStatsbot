@@ -30,8 +30,7 @@ class Duels(commands.Cog):
     @duels.error
     async def bedwars_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send('missing arguments! please follow this context:')
-            await ctx.send('`!duels ign`')
+            await ctx.send('missing arguments! please follow this context:\n`!command ign`')
 
 
 

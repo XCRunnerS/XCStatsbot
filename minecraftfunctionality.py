@@ -54,14 +54,17 @@ visualdict = {
     'SkyWars':
         {'color': discord.Color.blue(),
          'imageurl': 'https://imgur.com/BJS8r5H',
+         'level': 'skywars_you_re_a_star',
          },
     'Bedwars':
         {'color': discord.Color.red(),
          'imageurl': 'https://imgur.com/ZbDcW34',
+         'level' : 'bedwars_level', # these are in achivements
          },
     'Duels':
         {'color': discord.Color.gold(),
          'imageurl': 'https://imgur.com/FS5MMMt',
+         'level' : '-'
          }
 
 }  # colors and images dict, seperated for my own use
@@ -105,14 +108,23 @@ async def hypixelstats(igns, gameid, current_pages, ctxx):
             subname = (list(subgames)[current_page])# gets current subgame name (example skywars: overall)
             embedcolor = (visualdict[f'{gamename}']['color'])
             embedimg = (visualdict[f'{gamename}']['imageurl'])
-
-            embed = discord.Embed(title=f"IGN: {jsondump['player']['displayname']}",
+            try:
+                levelraw = jsondump['player']['achievements'][f'{(visualdict[f"{gamename}"]["level"])}']
+                embed = discord.Embed(title=(f'[{levelraw}] {jsondump["player"]["displayname"]}'),
+                                      color=embedcolor)
+                pass
+            except:
+                embed = discord.Embed(title=(f'{jsondump["player"]["displayname"]}'),
+                                  color=embedcolor)
+                pass
+            else:
+                embed = discord.Embed(title=(f'{jsondump["player"]["displayname"]}'),
                                   color=embedcolor)
             embed.set_author(name="XStats Bot", url="https://github.com/XCRunnerS",
                              icon_url=f"{embedimg}.png")  # this is the same method as the mojang api but just the url
             embed.set_thumbnail(url=f"{embedimg}.png")
             embed.add_field(name=f'{gamename}',
-                            value=f'{subname}', inline=False)
+                            value=f'`{subname}`', inline=False)
 
             gameitemindex = 0  # MAKE SURE THIS IS RESET WHEN A NEW LOOP HAPPENS
             # properly loops through items in subname

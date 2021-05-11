@@ -9,3 +9,13 @@ cogs/__pycache__/skywars.cpython-39.pyc
 cogs/__pycache__/skywarscommands.cpython-39.pyc
 XCStatsbot.7z
 cmd.bat
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/.gitignore
+.idea/.name
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/XCStatsbot.iml
+__pycache__/bot.cpython-39.pyc
+__pycache__/emojifunctionality.cpython-39.pyc
+__pycache__/minecraftfunctionality.cpython-39.pyc

@@ -115,8 +115,7 @@ class Skywarscommands(commands.Cog):
     @skywars.error
     async def skywar_serror(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send('missing arguments! please follow this context:')
-            await ctx.send('`!skywars ign`')
+            await ctx.send('missing arguments! please follow this context:\n`!command ign`')
 
     @commands.command(name="rating", aliases=["rsw", "rs", "ranked", "badgame", 'r'])
     async def rating(self, ctx, ign):
@@ -125,8 +124,7 @@ class Skywarscommands(commands.Cog):
     @rating.error
     async def rating_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send('missing arguments! please follow this context:')
-            await ctx.send('`!ranked ign`')
+            await ctx.send('missing arguments! please follow this context:\n`!command ign`')
 
 
 def setup(bot):
